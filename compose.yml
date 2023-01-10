@@ -4,6 +4,7 @@ services:
 
   wordpress:
     image: wordpress
+    container_name: wordpresscompose
     restart: always
     ports:
       - 8089:80
@@ -17,6 +18,7 @@ services:
 
   db_wp:
     image: mysql
+    container_name: mysqlcomposeforwordpress
     restart: always
     environment:
       MYSQL_DATABASE: wp12
